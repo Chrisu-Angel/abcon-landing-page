@@ -24,6 +24,37 @@ export default function Home() {
             Get in touch
           </a>
         </section>
+
+        <section
+          id="services"
+          className="w-full max-w-3xl px-6 py-16 sm:px-16"
+        >
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            Services
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="rounded-lg border border-black/[.08] p-6 dark:border-white/[.145]">
+              <h3 className="text-lg font-medium text-black dark:text-zinc-50">
+                Project concept note and DPR support
+              </h3>
+            </div>
+            <div className="rounded-lg border border-black/[.08] p-6 dark:border-white/[.145]">
+              <h3 className="text-lg font-medium text-black dark:text-zinc-50">
+                Program design and implementation planning
+              </h3>
+            </div>
+            <div className="rounded-lg border border-black/[.08] p-6 dark:border-white/[.145]">
+              <h3 className="text-lg font-medium text-black dark:text-zinc-50">
+                Procurement and bid advisory
+              </h3>
+            </div>
+            <div className="rounded-lg border border-black/[.08] p-6 dark:border-white/[.145]">
+              <h3 className="text-lg font-medium text-black dark:text-zinc-50">
+                Monitoring, evaluation, MIS, and dashboard support
+              </h3>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
