@@ -14,8 +14,8 @@ export default function Home() {
             priorities into practical programs, systems, and decisions.
           </h1>
           <p className="max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
-            For state government departments and autonomous bodies,
-            missions, societies, and SPVs.
+            For state government departments and autonomous bodies, missions,
+            societies, and SPVs.
           </p>
           <a
             href="mailto:consultant@angelbusipro.org"
@@ -25,10 +25,7 @@ export default function Home() {
           </a>
         </section>
 
-        <section
-          id="services"
-          className="w-full max-w-3xl px-6 py-16 sm:px-16"
-        >
+        <section id="services" className="w-full max-w-3xl px-6 py-16 sm:px-16">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Services
           </h2>
@@ -61,10 +58,9 @@ export default function Home() {
             About
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
-            ABCon Advisory Pvt. Ltd. works with state government departments
-            and autonomous bodies, missions, societies, and SPVs in Mizoram,
-            helping turn priorities into practical programs, systems, and
-            decisions.
+            ABCon Advisory Pvt. Ltd. works with state government departments and
+            autonomous bodies, missions, societies, and SPVs in Mizoram, helping
+            turn priorities into practical programs, systems, and decisions.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
             Engaged since 2025 with departments including C&amp;I, UD&amp;PA,
@@ -72,10 +68,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section
-          id="contact"
-          className="w-full max-w-3xl px-6 py-16 sm:px-16"
-        >
+        <section id="contact" className="w-full max-w-3xl px-6 py-16 sm:px-16">
           <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Contact
           </h2>
@@ -91,6 +84,9 @@ export default function Home() {
           </p>
         </section>
       </main>
+      <footer className="mt-16 border-t border-zinc-200 py-8 text-center text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+        © 2026 ABCon Advisory Pvt. Ltd.
+      </footer>
     </div>
   );
 }
