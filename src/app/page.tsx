@@ -55,6 +55,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="about" className="w-full max-w-3xl px-6 py-16 sm:px-16">
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            About
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
+            ABCon Advisory Pvt. Ltd. works with state government departments
+            and autonomous bodies, missions, societies, and SPVs in Mizoram,
+            helping turn priorities into practical programs, systems, and
+            decisions.
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
+            Engaged since 2025 with departments including C&amp;I, UD&amp;PA,
+            H&amp;FW, and the Horticulture Department.
+          </p>
+        </section>
       </main>
     </div>
   );
