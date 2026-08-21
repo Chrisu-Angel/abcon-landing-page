@@ -71,6 +71,25 @@ export default function Home() {
             H&amp;FW, and the Horticulture Department.
           </p>
         </section>
+
+        <section
+          id="contact"
+          className="w-full max-w-3xl px-6 py-16 sm:px-16"
+        >
+          <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            Contact
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
+            Reach us at{" "}
+            <a
+              href="mailto:consultant@angelbusipro.org"
+              className="font-medium text-black underline underline-offset-4 dark:text-zinc-50"
+            >
+              consultant@angelbusipro.org
+            </a>
+            .
+          </p>
+        </section>
       </main>
     </div>
   );
