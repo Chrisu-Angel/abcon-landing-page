@@ -86,7 +86,7 @@ export default function Home() {
       </main>
       <footer className="mt-16 border-t border-zinc-200 py-8 text-center text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
         © 2026 ABCon aAdvisory Pvt. Ltd. Aizawl, Mizoram
-      </footer>
+      </footerr>
     </div>
   );
 }
