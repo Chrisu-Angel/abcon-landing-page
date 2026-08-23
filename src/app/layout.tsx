@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create ABCon Landing Page",
+  title: "ABCon Landing Page",
   description: "This is ABCon Landing page",
 };
 
