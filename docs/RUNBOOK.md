@@ -9,7 +9,9 @@ Droplet IP: 165.232.191.165
 GitHub repo URL: https://github.com/Chrisu-Angel/abcon-landing-page
 User: abcon
 No DNS for now
-Vercel backup deployemnt: https://vercel.com/abc-on/~/deployments
+Vercel backup deployemnt: https://abcon-landing-page.vercel.app
+
+1. How to get in : ssh root@165.232.191.165 then su - abcon
 
 # How to deploy
 
@@ -57,8 +59,10 @@ Vercel backup deployemnt: https://vercel.com/abc-on/~/deployments
 
 # How to check it's alive
 
-    curl -s http://165.232.191.165/ | grep -o "Aizawl[^<]*"
-    systemctl list-unit-files | grep -E "^pm2"
+1. curl -s http://165.232.191.165/ | grep -o "Aizawl[^<]\*"
+2. systemctl list-unit-files | grep -E "^pm2" //check if service exists
+3. pm2 list // check if it runs
+4. curl -sI ... | head -1
 
 # Where the logs are
 
@@ -69,4 +73,29 @@ Vercel backup deployemnt: https://vercel.com/abc-on/~/deployments
 
     Server is 1GB only so when building more pages and features it might be a bottleneck
 
+    Add: no TLS yet (HTTP only); main requires a PR; Node 20 is end-of-life
+
+    package-lock.json shows as modified on the server after builds — if a future git pull conflicts, run git checkout -- package-lock.json first
+
 # If it's down
+
+1. Is nginx up? systemctl status nginx
+   → if down: systemctl start nginx
+
+2. Is the app up? su - abcon -c "pm2 list"
+   → if missing/errored: su - abcon -c "pm2 restart abcon-landing"
+
+3. What does the site say?
+   curl -sI http://165.232.191.165/ | head -1
+   → 502 Bad Gateway = nginx is fine, the app behind it is not → go to step 2
+   → no response at all = nginx is down → go to step 1
+   → 200 OK = it's actually up; the problem is elsewhere
+
+4. What do the logs say?
+   su - abcon -c "pm2 logs abcon-landing --lines 30 --nostream"
+   tail -20 /var/log/nginx/abcon-error.log
+   → EADDRINUSE = something else holds port 3000
+   → build/compile errors = a bad deploy → roll back
+
+5. Still broken? Roll back to the last known-good commit:
+   /home/abcon/rollback.sh <sha>
